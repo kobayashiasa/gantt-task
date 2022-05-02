@@ -1,24 +1,46 @@
-# README
+# アプリケーション名
+Gantt Task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+タスク管理ツール。ボードとガントチャート機能のみので視覚的にタスクを管理できるシンプルなアプリ。
 
-Things you may want to cover:
+# URL
 
-* Ruby version
+# テスト用アカウント
+- Basic認証ID：admin
+- Basic認証パスワード：2222
+- メールアドレス：
+- パスワード
 
-* System dependencies
+# 利用方法
+## ガントチャート
+1. トップページのヘッダーからユーザー新規登録を行う。
+2. 新規プロジェクト作成ボタンからプロジェクトのタイトルと詳細を入力して作成する。
+3. 開始日と期限を記入するとガントチャートが表示される。
 
-* Configuration
+## タスク管理
+1. トップページのヘッダーのタスク管理をクリックしてタスク一覧を表示
+2. 新規カラムの追加と新規タスクの追加ボタンからタスクを追加する。
+3. タスクをドラックアンドドロップでカラム移動する。
 
-* Database creation
+# アプリケーションを作成した背景
+仕事をする中で視覚的なタスク管理をしたいと考えた。
+複数機能を持つアプリ等は既に存在するけれど最小限の機能のものがあっても良いのではと考えて開発することを考えました。
 
-* Database initialization
+# 洗い出した要件
+要件定義したシートへのリンク
+https://docs.google.com/spreadsheets/d/1G36NwSqdWo3TkNSfZt1CAzykkRS3Eg30f04_CapqBPw/edit?usp=sharing
 
-* How to run the test suite
+# 実装した機能についての説明
 
-* Services (job queues, cache servers, search engines, etc.)
+# 実装予定の機能
 
-* Deployment instructions
+# データベース設計
+<img width="386" alt="ER" src="https://user-images.githubusercontent.com/96759696/166207419-6284c52d-f262-4ed2-b3d7-72b1920f3084.png">
 
-* ...
+# ページ遷移図
+<img width="790" alt="page" src="https://user-images.githubusercontent.com/96759696/166209262-c01b20a9-9509-4cd6-a653-0725b88aa3fe.png">
+
+# 開発環境
+
+
