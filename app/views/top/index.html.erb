@@ -9,6 +9,12 @@
               <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_column_path(column)) %>
             </div>
         </div>
+        <div class="cardWrapper">
+          <div class="addCard">
+            <i class="far fa-plus-square"></i>
+            <%= link_to "タスクを追加", new_column_task_path(column), class: "addCard_link" %>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
