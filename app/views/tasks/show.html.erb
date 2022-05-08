@@ -13,6 +13,9 @@
         <div>タスク名</div>
         <div><%= @task.column.column_title %></div>
       </div>
+      <div class="cardContents_btnArea">
+        <%= link_to '編集する', edit_column_task_path(@task.column, @task), class: "edit_btn" %>
+      </div>
     </div>
   </div>
 </div>
