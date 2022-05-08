@@ -4,6 +4,9 @@
       <div class="list">
         <div class="list_header">
           <h2 class="list_header_title"><%= column.column_title %></h2>
+            <div class="list_header_action">
+              <%= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_column_path(column)) %>
+            </div>
         </div>
       </div>
     <% end %>
