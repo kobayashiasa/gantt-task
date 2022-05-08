@@ -13,6 +13,10 @@ class TasksController < ApplicationController
     end
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   private
   def task_params
     params.require(:task).permit(:task_title, :task_info, :column_id)
