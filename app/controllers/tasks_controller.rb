@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def new
     @task = Task.new
-    @column = Column.find(params[:id])
+    @column = Column.find(params[:column_id])
   end
 
   def create

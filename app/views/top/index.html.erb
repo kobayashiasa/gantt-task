@@ -10,6 +10,14 @@
             </div>
         </div>
         <div class="cardWrapper">
+          <% column.tasks.each do |task| %>
+            <div class="card">
+              <h3 class="card_title"><%= task.task_title %></h3>
+              <% if task.task_info.size > 0 %>
+                <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+              <% end %>
+            </div>
+          <% end %>
           <div class="addCard">
             <i class="far fa-plus-square"></i>
             <%= link_to "タスクを追加", new_column_task_path(column), class: "addCard_link" %>
