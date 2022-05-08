@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update]
+  before_action :set_task, only: [:show, :edit, :update, :destroy]
   def new
     @task = Task.new
     @column = Column.find(params[:column_id])
@@ -28,7 +28,10 @@ class TasksController < ApplicationController
     end
   end
 
-  
+  def destroy
+    @task.destroy
+    redirect_to root_path
+  end
 
   private
   def task_params
