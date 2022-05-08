@@ -1,5 +1,5 @@
 class ColumnsController < ApplicationController
-  before_action :set_column, only: [:edit, :update]
+  before_action :set_column, only: [:edit, :update, :destroy]
   def new
     @column = Column.new
   end
@@ -22,6 +22,11 @@ class ColumnsController < ApplicationController
     else
       render action: :edit
     end
+  end
+
+  def destroy
+    @column.destroy
+    redirect_to root_path
   end
 
   private
