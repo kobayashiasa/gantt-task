@@ -12,6 +12,10 @@
         <%= f.label :詳細 %>
         <%= f.text_area :task_info, class: "form-control", placeholder: "詳細" %>
       </div>
+      <div class="cardeditForm_memo">
+        <label>カラム名</label>
+        <%= select :task, :column_id, @columns.map{ |column| [column.column_title, column.id] }, {}, { class: 'form-control' } %>
+      </div>
       <div class="text-center"><%= f.submit "更新する", class: "submitBtn" %></div>
     <% end %>
   </div>

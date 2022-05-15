@@ -18,6 +18,7 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @columns = Column.where(user: current_user)
   end
 
   def update
