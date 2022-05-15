@@ -4,6 +4,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :task_title, null: false, limit:100
       t.text :task_info, limit: 500
       t.references :column, null: false, foreign_key: true
+      t.integer :row_order
       t.timestamps
     end
   end

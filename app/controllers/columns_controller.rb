@@ -29,9 +29,15 @@ class ColumnsController < ApplicationController
     redirect_to root_path
   end
 
+  def sort
+    @column = Column.find(params[:column_id])
+    @column.update(column_params)
+    render nothing: true
+  end
+
   private
   def column_params
-    params.require(:column).permit(:column_title).merge(user: current_user)
+    params.require(:column).permit(:column_title, :row_order_position).merge(user: current_user)
   end
 
   def set_column

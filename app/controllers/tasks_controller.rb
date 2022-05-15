@@ -34,9 +34,15 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def sort
+    @task = Task.find(params[:task_id])
+    @task.update(task_params)
+    render body: nil
+  end
+
   private
   def task_params
-    params.require(:task).permit(:task_title, :task_info, :column_id)
+    params.require(:task).permit(:task_title, :task_info, :column_id, :row_order_position)
   end
 
   def set_task

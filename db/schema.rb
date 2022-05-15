@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2022_05_08_060439) do
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "column_title", null: false
     t.bigint "user_id", null: false
+    t.integer "row_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_columns_on_user_id"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_05_08_060439) do
     t.string "task_title", limit: 100, null: false
     t.text "task_info"
     t.bigint "column_id", null: false
+    t.integer "row_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["column_id"], name: "index_tasks_on_column_id"
