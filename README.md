@@ -5,6 +5,7 @@ Gantt Task
 タスク管理ツール。ボードとガントチャート機能のみので視覚的にタスクを管理できるシンプルなアプリ。
 
 # URL
+https://gantt-task.herokuapp.com/
 
 # テスト用アカウント
 - Basic認証ID：admin
