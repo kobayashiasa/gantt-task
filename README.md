@@ -10,8 +10,8 @@ https://gantt-task.herokuapp.com/
 # テスト用アカウント
 - Basic認証ID：admin
 - Basic認証パスワード：2222
-- メールアドレス：
-- パスワード
+- メールアドレス：test2@test.com
+- パスワード : test12
 
 # 利用方法
 ## ガントチャート
