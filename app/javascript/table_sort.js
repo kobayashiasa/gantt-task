@@ -19,11 +19,11 @@ function post(){
     },
   })
 
-  $('.cardWrapper').sortable({
+  $('.tasks').sortable({
     axis: 'y',
     cursor      : "grabbing",
     placeholder : "ui-state-highlight",
-    connectWith : '.listWrapper',
+    // connectWith : '.listWrapper',
 
     update: (e, ui) => {
       let item     = ui.item;
@@ -38,8 +38,16 @@ function post(){
         data: params
       })
     },
-    stop: function(e, ui){ 
-      return ui.item.children('task').effect('highlight');
+
+    start: (e, ui) => {
+      tableWidth = $(this).width()
+      cells = ui.item.children('task')
+      widthForEachCell = tableWidth / cells.length + 'px'
+      cells.css('width', widthForEachCell)
+    },
+
+    stop: (e, ui) => {
+      return ui.item.children('task').effect('highlight')
     },
   });
 };
