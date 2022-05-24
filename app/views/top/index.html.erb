@@ -13,6 +13,7 @@
           <div class="cardWrapper" style="cursol: grab;">
             <div class="tasks">
               <% column.tasks.each do |task| %>
+                
                 <%= content_tag "div", id: "tast-#{task.id}", data: { model_name: task.class.name.underscore, update_url: column_task_sort_path(column, task)} do %>
                   <%= link_to column_task_path(column, task), class:"cardDetail_link" do %>
                     <div class="card">
@@ -23,6 +24,7 @@
                     </div>
                   <% end %>
                 <% end %>
+                
               <% end %>
             </div>
             <div class="addCard">

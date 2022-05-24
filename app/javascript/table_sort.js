@@ -23,7 +23,7 @@ function post(){
     axis: 'y',
     cursor      : "grabbing",
     placeholder : "ui-state-highlight",
-    // connectWith : '.listWrapper',
+    connectWith : '.tasks',
 
     update: (e, ui) => {
       let item     = ui.item;
