@@ -1,5 +1,6 @@
 class TopController < ApplicationController
   def index
-    @columns = Column.where(user: current_user).rank(:row_order)
+    @columns = Column.rank(:row_order)
+    @tasks = Task.rank(:row_order)
   end
 end

@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   def sort
     @task = Task.find(params[:task_id])
     @task.update(task_params)
-    render body: nil
+    render nothing: true
   end
 
   private

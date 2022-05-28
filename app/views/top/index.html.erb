@@ -11,18 +11,22 @@
               </div>
           </div>
           <div class="cardWrapper" style="cursol: grab;">
-            <% column.tasks.each do |task| %>
-              <%= content_tag "div", id: "tast-#{task.id}", data: { model_name: task.class.name.underscore, update_url: column_task_sort_path(column, task)} do %>
-                <%= link_to column_task_path(column, task), class:"cardDetail_link" do %>
-                  <div class="card">
-                    <h3 class="card_title"><%= task.task_title %></h3>
-                    <% if task.task_info.size > 0 %>
-                      <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
-                    <% end %>
-                  </div>
+            <div class="tasks">
+              <% column.tasks.each do |task| %>
+                
+                <%= content_tag "div", id: "task-#{task.id}", data: { id: task.id, model_name: task.class.name.underscore, update_url: column_task_sort_path(column, task)} do %>
+                  <%= link_to column_task_path(column, task), class:"cardDetail_link" do %>
+                    <div class="card">
+                      <h3 class="card_title"><%= task.task_title %></h3>
+                      <% if task.task_info.size > 0 %>
+                        <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                      <% end %>
+                    </div>
+                  <% end %>
                 <% end %>
+                
               <% end %>
-            <% end %>
+            </div>
             <div class="addCard">
               <i class="far fa-plus-square"></i>
               <%= link_to "タスクを追加", new_column_task_path(column), class: "addCard_link" %>
